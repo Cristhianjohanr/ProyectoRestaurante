@@ -3,9 +3,11 @@ import cors from 'cors'
 
 const app = express()
 
-app.use(cors());
+app.use(cors())
 
-const data = [
+app.use (express.json())
+
+let data = [
     {id: 0, plate: "Sancocho trifasico Santanderiano", price: 25000, description: "Reserva cumpleaños"},
     {id: 1, plate: "Chuleta Valluna", price: 35000, description: "Reserva empresarial"},
     {id: 2, plate: "Ajiaco Santafereño", price: 35000, description: "Reserva aniversario"},
@@ -13,7 +15,6 @@ const data = [
 ]
 
 app.get("/", (req, res) => {
-
     res.json({
         msg: "Reservaciones",
         data: data
@@ -21,12 +22,14 @@ app.get("/", (req, res) => {
 })
 
 app.post("/", (req, res) => {
+    console.log("request", req.body)
 
+    const {plate, price, description} = req.body
+    
     data.push({
-        id: 4, 
-        plate: "Bandeja Paisa", 
-        price: 25000, 
-        description: "Reserva individual"
+        plate, 
+        price, 
+        description
     })
 
     res.json({
