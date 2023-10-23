@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&family=Exo:wght@200&family=Raleway:ital@1&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*DEFINICIÓN DE VARIABLES COROLES*/
+:root {
+    --background-color1: #092d19;
+    --background-color2: #1d1c1c;
+    --font-color1:#ffffff;
+    --background-section2: #747474;
+    --background-section1: #bc999f;
+    --nombre-color: #000101;
+    --nombre-color2: #295c44;
+    --especialidades-color: #ffffff;
+    --especialidades-color2: #e8909e;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: var(--background-color1);
+    height: 150px;
+    width: 100%;
+    color: var(--font-color1);
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+
+.titulos {
+    font-size:25px;
+    margin:8px;
+    margin-top: 50px;
+
+}
+
+
+header img {
+    margin: 30px;
+    height: 150px;
+    width: 150px;
+}
+
+
+header p {
+    text-align: center;
+    padding-top: 60px;
+    margin-left: 200px;
+    width: 100%;
+    font-size: 18px;
+}
+
+
+header nav {
+    padding-top: 60px;
+    font-size: 20px;
+    width: 100%;
+    margin: center;
+    display: block;
+}
+
+
+nav li a:hover {
+    background-color: var(--background-section2);
+}
+
+
+header nav ul {
+    display: none;
+    position: absolute;
+    width: 30%;
+}
+
+
+header nav:hover > ul {
+    display: block;
+}
+
+
+header nav ul li {
+    position: relative;
+    margin-top: 10px;
+    list-style: none;
+}
+
+
+header nav ul li a {
+    color: var(--font-color1);
+    display: block;
+}
+
+
+main {
+    background-color: var(--background-section1);   
+}
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+    padding-top: 185px;
+}
+
+
+.container {
+    display:grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: 480px 480px 530px;
+    grid-gap: 5px;
+    margin-top: 20px;
+}
+
+
+.section {
+    width: 100%;
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.article {
+    width: 100%;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+
+article a {
+    font-size: 25px;
+    text-align: center;
+}
+
+
+.container aside {
+    grid-row: 1 / 3;
+    grid-column: 3 / 3;
+    margin-top: 20px;
+    background-image: url('../images/Dra\ Fabiola\ Rodriguez2.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+
+.centrado {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top:15px;
+}
+
+
+#valoracion {
+  border-radius: 10px; 
+  background-color: var(--background-color1);
+  color: var(--especialidades-color);
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+div h2 {
+    font-size: 40px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+div h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+#correo {
+    font-size:30px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+
+.blog {
+    margin-top:30px;
+    display:flex;
+    font-size: 25px;
+    flex-direction: row;
+    text-align: center;
+    background-color: rgb(171, 115, 124);
+}
+
+
+#capilar {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+
+#facial {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+
+.titulo-tarjeta {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+
+.texto-tarjeta {
+    font-size: 25px;
+    
+}
+
+
+main div img {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+
+footer {
+    background: var(--background-color1);
+    height: 120px;
+    color: var(--font-color1);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer section {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer section p {
+    font-size:20px;
+}
+
+
+footer section div{
+    color:inherit;
+    display:flex;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.contact {
+    margin-top: 90px;    
+}
+
+
+#doctora {
+    font-size: 40px;
+    font-weight: bolder;
+    color:var(--nombre-color) ;
+    text-align: center;
+}
+
+
+#especialidades {
+    margin-top: 20px;
+    font-size: 30px;
+    color: var(--especialidades-color);
+}
+
+
+.correo {
+    color:inherit;
+    text-decoration:under solid;
+}
+
+
+.redes {
+    color:inherit;
+    text-decoration:none;
+
+}
+
+
+#low-footer {
+    margin-top: 30px;
+    font-size:13px;
+}
+
+.contactenos {
+    display:flex;
+}
+
+
+/* Dispositivos con un ancho máximo de 600px */
+@media (max-width: 600px) {
+    header {
+       background-color: var(--nombre-color);
+       height: 550px;
+       display: inline-block;
+    }
+
+    header a {
+        text-align:left;
+        display: inline-block;
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+        margin-top:360px;
+        gap: 12px;
+    }
+
+    main .article {
+        gap: 12px;
+    }
+
+    .container {
+        gap: 12px;
+        width: 10%;
+    }
+
+    .article {
+        width: 50%;
+    }
+
+    .blog {
+        margin-bottom: 20px;
+    }
+
+    footer section {
+        background-color: #000101;
+    }
+
+    footer section div {
+        display:block;
+    }
+}
+  
