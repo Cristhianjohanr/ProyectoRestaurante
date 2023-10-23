@@ -22,7 +22,7 @@ useEffect(() => {
     const allReservations = await response.json()
     
     setReservations(allReservations.data)
-    return;
+    return
   }
 
   fecthReservations()
@@ -63,11 +63,29 @@ const handleChange = (e) => {
 
   return (
     <>
-      <HeadeRest />
-      <FooteRest />
+    
+    <HeadeRest />
+    <FooteRest />
+
+
+    <div style={{ display: 'flex', flexDirection: 'row' }}>  
+        <img src="/images/Bienvenida.jpg" alt="Comida Colombiana internacional" width="50%" height="auto" />
+        <article style={{ width: '50%', marginLeft: '20px' }}>
+          <h1 style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '30px' }} >Restaurante Colombia Internacional</h1>
+          <h2 style={{ textAlign: 'center' }} >Conoce los mejores platos de comida latinoamericana y en especial la colombiana, rica en diversidad y sabores.</h2>
+          <p>En un rincón acogedor de nuestra tierra colombiana, te invitamos a un viaje culinario inolvidable. 
+            En nuestro restaurante, la riqueza y la diversidad de la comida internacional colombiana se despliegan ante tus 
+            sentidos en cada plato. Desde el primer bocado, te sumergirás en un mundo de sabores auténticos que han sido transmitidos
+            de generación en generación. Desde los suculentos ajiacos hasta los exquisitos platos de mariscos y las deliciosas arepas 
+            rellenas, cada receta es un tesoro que celebra nuestra herencia gastronómica. Ven y descubre por ti mismo cómo la pasión 
+            de nuestra cocina se fusiona con la hospitalidad colombiana, creando una experiencia que te hará sentir como en casa.</p>
+        </article>
+    </div><br></br><br></br><br></br><br></br><br></br><br></br>
+
+
 
       <div>
-        <form style={{display:"flex"}} onSubmit={(e) => handleSubmit(e, newReservations)}>
+        <form style={{display:"flex", justifyContent: "space-between"}} onSubmit={(e) => handleSubmit(e, newReservations)}>
          <div>
           <label>Plato</label>
           <input name="plate" onChange={(e) => handleChange (e)} value={newReservations.plate} />
@@ -78,7 +96,7 @@ const handleChange = (e) => {
          </div>
          <div>
           <label>Descripción</label>
-          <textarea name="description" onChange={(e) => handleChange (e)} value={newReservations.description} />
+          <textarea style={{width: '300px', height: '20px'}} name="description" onChange={(e) => handleChange (e)} value={newReservations.description} />
          </div>
          <button>Reservar</button>
          <button>Cancelar</button>
@@ -90,16 +108,14 @@ const handleChange = (e) => {
         reservations.length === 0 ? <p>No hay Reservaciones</p> : reservations.map (e => {
           return (
             <div key={e.id}>
-              <h1>Plato: {e.plate}</h1>
-              <h1>Precio: {e.price}</h1>
-              <h1>Descripción: {e.description}</h1>
+              <div style={{marginTop: '10px'}}><h1>Plato: {e.plate}</h1></div>
+              <div style={{marginTop: '10px'}}><h1>Precio: {e.price}</h1></div>
+              <div style={{marginTop: '10px'}}><h1>Descripción: {e.description}</h1></div>
             </div>
           )
         })
-      }
-
-
-
+      }<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+       <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
 
     </>
   )
