@@ -5,13 +5,15 @@ import './App.css'
 
 function App() {
 
-  const [reservations, setReservations] = useState([]);
+  const [reservations, setReservations] = useState([])
+  const serverUrl = import.meta.env.VITE_SERVER_URL
+  console.log("IP",serverUrl)
 
 useEffect(() => {
 
   const fecthReservations = async () => {
 
-    const response = await fetch("http://localhost:3005")
+    const response = await fetch(serverUrl)
     const allReservations = await response.json()
     
     setReservations(allReservations.data)
