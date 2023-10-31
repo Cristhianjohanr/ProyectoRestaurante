@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import HeadeRest from './HeadeRest'
 import FooteRest from './FooteRest'
+import bienvenidaImage from './../images/Bienvenida.jpg' 
 import './App.css'
 
 function App() {
@@ -69,7 +70,7 @@ const handleChange = (e) => {
 
 
     <div style={{ display: 'flex', flexDirection: 'row' }}>  
-        <img src="/images/Bienvenida.jpg" alt="Comida Colombiana internacional" width="50%" height="auto" />
+        <img src={bienvenidaImage} alt="Comida Colombiana internacional" width="50%" height="auto" />
         <article style={{ width: '50%', marginLeft: '20px' }}>
           <h1 style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '30px' }} >Restaurante Colombia Internacional</h1>
           <h2 style={{ textAlign: 'center' }} >Conoce los mejores platos de comida latinoamericana y en especial la colombiana, rica en diversidad y sabores.</h2>
